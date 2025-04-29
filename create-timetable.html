@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Timetable</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Timetable Manager</div>
+    <a href="index.html" class="navbar-btn">Go Back</a>
+  </nav>
+
+  <section class="create-timetable">
+    <h2>Create Your Timetable</h2>
+    <form id="timetableForm">
+      <label for="day">Day:</label>
+      <input type="text" id="day" name="day" placeholder="Enter Day (e.g., Monday)" required>
+
+      <label for="time">Time Slot:</label>
+      <input type="text" id="time" name="time" placeholder="Enter Time Slot (e.g., 9:00 AM - 10:00 AM)" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter Subject Name" required>
+
+      <button type="button" id="addRow">Add Row</button>
+      <button type="submit">Generate Timetable</button>
+    </form>
+
+    <h3>Preview</h3>
+    <table id="previewTable" class="timetable">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time Slot</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    const form = document.getElementById('timetableForm');
+    const previewTable = document.getElementById('previewTable').querySelector('tbody');
+    const addRowButton = document.getElementById('addRow');
+
+    addRowButton.addEventListener('click', () => {
+      const day = document.getElementById('day').value;
+      const time = document.getElementById('time').value;
+      const subject = document.getElementById('subject').value;
+
+      if (day && time && subject) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${day}</td>
+          <td>${time}</td>
+          <td>${subject}</td>
+        `;
+        previewTable.appendChild(row);
+
+        document.getElementById('day').value = '';
+        document.getElementById('time').value = '';
+        document.getElementById('subject').value = '';
+      } else {
+        alert('Please fill in all fields');
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Timetable generated successfully!');
+    });
+  </script>
+</body>
+</html>

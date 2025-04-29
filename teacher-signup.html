@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Signup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Timetable Manager</div>
+  </nav>
+
+  <div class="login-container">
+    <h2>Teacher Signup</h2>
+    <form action="/signup-teacher" method="POST">
+      <label for="teacher-name">Name:</label>
+      <input type="text" id="teacher-name" name="teacher-name" placeholder="Enter your name" required>
+
+      <label for="teacher-email">Email:</label>
+      <input type="email" id="teacher-email" name="teacher-email" placeholder="Enter your email" required>
+
+      <label for="teacher-password">Password:</label>
+      <input type="password" id="teacher-password" name="teacher-password" placeholder="Create a password" required>
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <button class="btn-secondary" onclick="goBack()">Go Back</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'signup.html';
+    }
+  </script>
+</body>
+</html>

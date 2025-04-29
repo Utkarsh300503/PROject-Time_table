@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Timetable Manager</div>
+    <div class="nav-links">
+      <div class="user-dropdown">
+        <button class="navbar-btn dropdown-btn">Login</button>
+        <div class="dropdown-content">
+          <a href="teacher-login.html">Teacher Login</a>
+          <a href="student-login.html">Student Login</a>
+        </div>
+      </div>
+      <a href="signup.html" class="navbar-btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to Timetable Management</h1>
+    <p>Manage your schedules with ease.</p>
+    <div class="cta-buttons">
+      <a href="signup.html" class="btn-primary">Get Started - Sign Up</a>
+      <a href="create-timetable.html" class="btn-secondary">Create a Timetable</a>
+    </div>
+  </header>
+
+  <!-- Example Timetable Section -->
+  <section class="example-timetable">
+    <h2>Example Timetable</h2>
+    <p>Here’s an example of how your timetable might look:</p>
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 AM - 10:00 AM</th>
+          <th>10:00 AM - 11:00 AM</th>
+          <th>11:00 AM - 12:00 PM</th>
+          <th>12:00 PM - 1:00 PM</th>
+          <th>2:00 PM - 3:00 PM</th>
+          <th>3:00 PM - 4:00 PM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Math</td>
+          <td>English</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>History</td>
+          <td>PE</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
